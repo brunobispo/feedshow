@@ -21,3 +21,5 @@
 
 en:
   log_in_with_instagram: "Log in with Instagram"
+  successfully_authenticated: 'Successfully authenticated from Instagram account'
+  could_not_authenticate: 'Could not authenticate you from Instagram'

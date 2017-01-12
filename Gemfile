@@ -7,6 +7,8 @@ end
 
 # A authentication framework
 gem 'devise'
+# Easy way to get connected by Instagram OAuth
+gem 'omniauth-instagram'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
