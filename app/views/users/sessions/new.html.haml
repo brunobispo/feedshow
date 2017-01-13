@@ -1,1 +1,8 @@
-= link_to t('log_in_with_instagram'), user_instagram_omniauth_authorize_path
+.overlay
+.login-panel.container-fluid
+  .text-center
+    %h1= t('.title')
+    %h2= t('.subtitle')
+  .row
+    .col-md-4.col-md-offset-4
+      = link_to fa('fa-instagram') + ' ' + t('log_in_with_instagram'), user_instagram_omniauth_authorize_path, class: 'btn btn-lg btn-block btn-default'

@@ -1,2 +1,4 @@
-- @pictures.each do |picture|
-  %img{src: picture.images.standard_resolution.url}
+.carousel{'data-flickity' => '{ "cellAlign": "left", "contain": true, "cellSelector": ".carousel-cell", "setGallerySize": false, "autoPlay": 5000, "pauseAutoPlayOnHover": false }'}
+  - @pictures.each do |picture|
+    .carousel-cell
+      %img{src: picture.images.standard_resolution.url}

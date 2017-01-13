@@ -1,2 +1,3 @@
 - flash.each do |type, message|
-  = message
+  :javascript
+    toastr["#{type}"](#{message.to_json})

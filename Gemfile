@@ -40,6 +40,12 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
+source 'https://rails-assets.org' do
+  gem 'rails-assets-bootstrap', '3.3.7'
+  gem 'rails-assets-font-awesome', '~> 4.3.0'
+  gem 'rails-assets-toastr'
+end
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

@@ -15,7 +15,7 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
   def failure
     redirect_to new_user_session_path
-    flash.notice = t('could_not_authenticate') if is_navigational_format?
+    flash.alert = t('could_not_authenticate') if is_navigational_format?
   end
 
 end
