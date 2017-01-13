@@ -15,8 +15,6 @@ services:
       SECRET_KEY_BASE: abcdefg
       RAILS_ENV: development
       POSTGRES_PASSWORD: mypass
-      INSTAGRAM_ID: 5ab6e049f830413487ae5f0ebf5ecef5
-      INSTAGRAM_SECRET: fdceec3359d14a1388e95d66aad75f0d
       PORT: 3000
     ports:
       - "80:3000"
@@ -24,6 +22,8 @@ services:
       - db
     networks:
       - default
+    env_file:
+      secrets.env
 
 networks:
   default:
