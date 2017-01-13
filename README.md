@@ -1,24 +1,13 @@
-# README
+# FeedShow
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A small Rails application that shows the Instagram feed as a slideshow (Ruby on Rails - Tech Test)
 
-Things you may want to cover:
+## Installation
 
-* Ruby version
+Before you get started, the Docker environment needs to be installed.
 
-* System dependencies
+### Launching
 
-* Configuration
+    docker-compose up -d
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+The UI are available on `http://<HOST_IP>/`
