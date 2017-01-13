@@ -6,7 +6,8 @@ module OmniauthHelper
   def mock_authorized_instagram
     mock_omniauth
     OmniAuth.config.mock_auth[:instagram] = OmniAuth::AuthHash.new(
-      id: '12345', username: 'bbispo', full_name: 'Bruno Bispo'
+      id: '12345', username: 'bbispo', full_name: 'Bruno Bispo',
+      credentials: {token: '123'}
     )
   end
 

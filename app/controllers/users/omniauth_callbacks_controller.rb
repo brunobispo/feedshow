@@ -1,8 +1,14 @@
 class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
   def instagram
-  user = User.where(instagram_id: request.env["omniauth.auth"]['uid']).first_or_create!
-    
+    user = User
+      .where(instagram_id: request.env["omniauth.auth"].uid)
+      .first_or_initialize
+
+    user.update(instagram_access_token: request.env["omniauth.auth"].credentials.token)
+
+    byebug
+
     sign_in_and_redirect user, event: :authentication
     flash.notice = t('successfully_authenticated') if is_navigational_format?
   end

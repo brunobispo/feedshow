@@ -1,6 +1,10 @@
 require 'rails_helper'
 
 feature 'Authentications', type: :feature do
+  background do
+    stub_instagram_recent_media
+  end
+
   scenario 'Unauthenticated user can not access the pictures page' do
     sign_out :user
     visit pictures_path

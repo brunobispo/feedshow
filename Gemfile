@@ -9,7 +9,8 @@ end
 gem 'devise'
 # Easy way to get connected by Instagram OAuth
 gem 'omniauth-instagram'
-
+# Instagram API
+gem 'instagram', '~> 1.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.1'
@@ -49,6 +50,8 @@ group :development, :test do
   gem 'rspec-rails'
   # Allow rspec feature specs
   gem 'capybara'
+  # Stub remote calls
+  gem 'webmock'
 end
 
 group :development do
