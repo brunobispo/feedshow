@@ -5,8 +5,21 @@ require File.expand_path('../../config/environment', __FILE__)
 abort("The Rails environment is running in production mode!") if Rails.env.production?
 require 'spec_helper'
 require 'rspec/rails'
-require 'webmock/rspec'
 # Add additional requires below this line. Rails is not loaded until this point!
+require 'webmock/rspec'
+require 'capybara/webkit'
+require 'headless'
+
+WebMock.disable_net_connect!(allow_localhost: true)
+
+headless = Headless.new
+headless.start
+
+Capybara.javascript_driver = :webkit
+Capybara.run_server = true 
+Capybara.server_port = 7000
+Capybara.app_host = "http://localhost:#{Capybara.server_port}" 
+
 
 # Requires supporting ruby files with custom matchers and macros, etc, in
 # spec/support/ and its subdirectories. Files matching `spec/**/*_spec.rb` are

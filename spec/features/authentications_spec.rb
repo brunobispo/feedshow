@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-feature 'Authentications', type: :feature do
+feature 'Authentications', type: :feature, js: true do
   background do
     stub_instagram_recent_media
   end

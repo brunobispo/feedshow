@@ -58,6 +58,9 @@ group :development, :test do
   gem 'capybara'
   # Stub remote calls
   gem 'webmock'
+  # Allow js on rspec
+  gem 'capybara-webkit'
+  gem 'headless'
 end
 
 group :development do

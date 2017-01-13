@@ -7,8 +7,6 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
     user.update(instagram_access_token: request.env["omniauth.auth"].credentials.token)
 
-    byebug
-
     sign_in_and_redirect user, event: :authentication
     flash.notice = t('successfully_authenticated') if is_navigational_format?
   end

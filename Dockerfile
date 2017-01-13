@@ -1,6 +1,6 @@
 FROM ruby:2.3
 
-RUN apt-get update && apt-get install -y nodejs postgresql-client
+RUN apt-get update && apt-get install -y nodejs postgresql-client qt4-dev-tools libqt4-dev libqt4-core libqt4-gui xvfb
 
 WORKDIR /tmp
 ADD Gemfile Gemfile
