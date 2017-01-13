@@ -12,4 +12,8 @@ Copy the file `secrets.env.sample` to `secrets.env` and fill the gaps.
 
     docker-compose up -d
 
+### Tests
+
+    docker-compose up -d tests
+
 The UI are available on `http://<HOST_IP>/`
